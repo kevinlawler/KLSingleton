@@ -37,7 +37,7 @@ You may then retrieve the unique, ready-to-use instance of your class by calling
 1. This has been tested on ARC only. Test on projects without ARC support.
 2. See if there are any meaningful differences with the swizzle method.
 3. Macro the options to become lazy and either "require initialization" or "lock to allocate"
-4. Something like `dispatch_once` that ran once for each subclass would let us be lazy for free
+4. Something like `dispatch_once` that ran once for each subclass would let us be lazy for free. Per-subclass tokens?
 
 ## License
 
