@@ -6,10 +6,11 @@ NSSingleton is:
 
 1. Subclassible (to the n-th degree)
 2. ARC compatible
-3. Thread-safe (uses +initialize, not @synchronize)
-4. Macro-free
-5. Swizzle-free
-6. Simple
+3. Safe with `alloc` and `init`
+4. Thread-safe (uses +initialize, not @synchronize)
+5. Macro-free
+6. Swizzle-free
+7. Simple
 
 It has been tested only with ARC. This implementation chooses "not lazy" instead of "requires explicit initialization" or "locks to allocate".
 
