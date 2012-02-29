@@ -47,7 +47,7 @@ static NSMutableDictionary* _children;
 
 //stop other creative stuff
 +(id) new {
-    return [self alloc];
+    return [self instance];
 }
 
 +(id)copyWithZone:(NSZone *)zone {
