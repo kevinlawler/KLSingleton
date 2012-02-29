@@ -1,6 +1,6 @@
 ## Description
 
-This is a singleton class for iOS, Objective-C, Cocoa Touch, iPhone, iPad. We offer no judgement as to whether or not to use singletons. If you do use singletons in your project, then use NSSingleton. NSSingleton is named in a manner designed to minimize the amount of discussion about singletons, pro or con.
+This is a singleton class for iOS, Objective-C, Cocoa Touch, iPhone, iPad. We offer no judgement as to whether or not to use singletons. If you do use singletons in your project, then use NSSingleton.
 
 NSSingleton is:
 
@@ -12,7 +12,7 @@ NSSingleton is:
 6. Swizzle-free
 7. Simple
 
-It has been tested only with ARC. This implementation chooses "not lazy" instead of "requires explicit initialization" or "locks to allocate".
+It has been tested only with ARC. This implementation chooses "not lazy" instead of "requires explicit initialization" or "locks to allocate". NSSingleton is named in a manner designed to minimize the amount of discussion about singletons, pro or con.
 
 ## Use
 
