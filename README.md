@@ -12,7 +12,7 @@ NSSingleton is:
 6. Swizzle-free
 7. Simple
 
-It has been tested only with ARC. This implementation chooses "not lazy" instead of "requires explicit initialization" or "locks to allocate". NSSingleton is named in a manner designed to minimize the amount of discussion about singletons, pro or con.
+It has been tested only with ARC. This implementation chooses "not lazy" instead of "requires explicit initialization" or "locks to allocate".
 
 ## Use
 
