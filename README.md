@@ -12,7 +12,7 @@ KLSingleton is:
 6. Swizzle-free
 7. Simple
 
-In terms of singleton philosophy, this implementation chooses "not lazy" instead of "requires explicit initialization" or "locks to allocate".
+This implementation chooses the singleton philosophy of "not lazy" instead of "requires explicit initialization" or "locks to allocate".
 
 ## Use
 
