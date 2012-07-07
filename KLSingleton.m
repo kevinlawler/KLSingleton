@@ -1,9 +1,9 @@
 //Subclassible thread-safe ARC singleton
 //Copyright Kevin Lawler. Released under ISC.
 
-#import "NSSingleton.h"
+#import "KLSingleton.h"
 
-@implementation NSSingleton
+@implementation KLSingleton
 
 static NSMutableDictionary* _children;
 
