@@ -46,28 +46,3 @@ If you need to lazily allocate a large instance variable use `dispatch_once` in 
 ## License
 
 Released under ISC (similar to 2-clause BSD)
-
-## Testing / Verification
-
-<pre>
-@interface NSAlpha : KLSingleton
-@end
-@interface NSBravo : KLSingleton
-@end
-@interface NSCharlie : NSBravo
-@end
-
-@implementation NSAlpha
-@end
-@implementation NSBravo
-@end
-@implementation NSCharlie
-@end
-
-id a,b,c,d;
-NSLog(@"%d=%d=%d", a=[KLSingleton instance], [[KLSingleton alloc] init], [[KLSingleton alloc] init]);
-NSLog(@"%d=%d=%d", b=[NSAlpha instance],     [[NSAlpha alloc] init],     [[NSAlpha alloc] init]);
-NSLog(@"%d=%d=%d", c=[NSBravo instance],     [[NSBravo alloc] init],     [[NSBravo alloc] init]);
-NSLog(@"%d=%d=%d", d=[NSCharlie instance],   [[NSCharlie alloc] init],   [[NSCharlie alloc] init]);
-NSLog(@"%d != %d != %d != %d", a, b, c, d);
-</pre>
