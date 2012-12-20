@@ -35,8 +35,6 @@ You may then retrieve the unique, ready-to-use instance of your class by calling
 [[MYSubclass alloc] init]   //bad style, but safe to call any number of times
 </pre>
 
-If you need to lazily allocate a large instance variable use `dispatch_once` in the getter. You might do this if, for instance, you needed 500MB of workspace but did not want that memory to be allocated on startup.
-
 ## Future Directions
 
 1. This has been tested on ARC only. Test on projects without ARC support.
