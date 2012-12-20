@@ -13,7 +13,7 @@ KLSingleton is:
 7. Swizzle-free
 8. Simple
 
-This implementation chooses the singleton philosophy of "not lazy" instead of "requires explicit initialization" or "locks to allocate".
+This implementation "loads lazily" (which is good). It does not "require explicit initialization" and it does not "lock to allocate".
 
 ## Use
 
@@ -40,8 +40,7 @@ If you need to lazily allocate a large instance variable use `dispatch_once` in 
 
 1. This has been tested on ARC only. Test on projects without ARC support.
 2. See if there are any meaningful differences with the swizzle method.
-3. Macro the options to become lazy and either "require initialization" or "lock to allocate"
-4. Something like `dispatch_once` that ran once for each subclass would let us be lazy for free. Per-subclass tokens?
+3. Something like `dispatch_once` that ran once for each subclass would let us be lazy for free. Per-subclass tokens?
 
 ## License
 
