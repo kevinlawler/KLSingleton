@@ -7,11 +7,12 @@ KLSingleton is:
 1. Subclassible (to the n-th degree)
 2. ARC compatible
 3. Safe with `alloc` and `init`
-4. Thread-safe
-5. Lock-free (uses +initialize, not @synchronize)
-6. Macro-free
-7. Swizzle-free
-8. Simple
+4. Loaded lazily
+5. Thread-safe
+6. Lock-free (uses +initialize, not @synchronize)
+7. Macro-free
+8. Swizzle-free
+9. Simple
 
 This implementation "loads lazily" (which is good). It does not "require explicit initialization" and it does not "lock to allocate".
 
