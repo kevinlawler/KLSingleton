@@ -15,7 +15,7 @@ KLSingleton is:
 0. Swizzle-free
 0. Simple
 
-This implementation "loads lazily" (which is good). It does not "require explicit initialization" and it does not "lock to allocate".
+This implementation "loads lazily" (which is good). It does not "require explicit initialization" and it does not "lock to allocate". This implementation eliminates the iOS singleton boilerplate.
 
 ## Use
 
