@@ -4,6 +4,7 @@ This is a singleton class for iOS, Objective-C, Cocoa Touch, iPhone, iPad.
 
 KLSingleton is:
 
+0. Used in production
 1. Subclassible (to the n-th degree)
 2. ARC compatible
 3. Safe with `alloc` and `init`
