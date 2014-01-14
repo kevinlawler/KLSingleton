@@ -7,55 +7,68 @@
 
 static NSMutableDictionary* _children;
 
-+(void) initialize //thread-safe
-{    
-    if(!_children) {
-        _children = [[NSMutableDictionary alloc] init];
-    }   
-
-    [_children setObject:[[self alloc] init] forKey:NSStringFromClass([self class])];
++ (void)initialize //thread-safe
+{
+  if (!_children) {
+    _children = [[NSMutableDictionary alloc] init];
+  }
+  
+  [_children setObject:[[self alloc] init] forKey:NSStringFromClass([self class])];
 }
 
-+(id) alloc {
-    id c;
-    if((c = [self instance])) {
-        return c;
-    }
-    return [self allocWithZone:nil];
++ (instancetype)alloc
+{
+  id c;
+  
+  if ((c = [self instance])) {
+    return c;
+  }
+  return [self allocWithZone:nil];
 }
 
--(id) init {
-    id c;
-    if((c = [_children objectForKey:NSStringFromClass([self class])])) { //sic, unfactored
-        return c;
-    }
-    self = [super init];
-    return self;
+- (instancetype)init
+{
+  id c;
+  if ((c = [_children objectForKey:NSStringFromClass([self class])])) { //sic, unfactored
+    return c;
+  }
+  self = [super init];
+  return self;
 }
 
-+(id) instance {
-    return [_children objectForKey:NSStringFromClass([self class])];
++ (instancetype)instance
+{
+  return [_children objectForKey:NSStringFromClass([self class])];
 }
 
-+(id) sharedInstance { //alias for instance
++ (instancetype)defaultInstance
+{
     return [self instance];
 }
 
-+(id) singleton {      //alias for instance
++ (instancetype)sharedInstance
+{
     return [self instance];
 }
 
-//stop other creative stuff
-+(id) new {
-    return [self instance];
++ (instancetype)singleton
+{
+  return [self instance];
 }
 
-+(id)copyWithZone:(NSZone *)zone {
-    return [self instance];
++ (instancetype)new
+{
+  return [self instance];
 }
 
-+(id)mutableCopyWithZone:(NSZone *)zone {
-    return [self instance];
++ (instancetype)copyWithZone:(NSZone *)zone
+{
+  return [self instance];
+}
+
++ (instancetype)mutableCopyWithZone:(NSZone *)zone
+{
+  return [self instance];
 }
 
 @end
