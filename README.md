@@ -38,7 +38,6 @@ You may then retrieve the unique, ready-to-use instance of your class by calling
 ## Future Directions
 
 1. This has been tested on ARC only. Test on projects without ARC support.
-2. See if there are any meaningful differences with the swizzle method.
 
 ## License
 
