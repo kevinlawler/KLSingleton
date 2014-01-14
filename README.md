@@ -5,15 +5,15 @@ This is a singleton class for iOS, Objective-C, Cocoa Touch, iPhone, iPad.
 KLSingleton is:
 
 0. Used in production
-1. Subclassible (to the n-th degree)
-2. ARC compatible
-3. Safe with `alloc` and `init`
-4. Loaded lazily
-5. Thread-safe
-6. Lock-free (uses +initialize, not @synchronize)
-7. Macro-free
-8. Swizzle-free
-9. Simple
+0. Subclassible (to the n-th degree)
+0. ARC compatible
+0. Safe with `alloc` and `init`
+0. Loaded lazily
+0. Thread-safe
+0. Lock-free (uses +initialize, not @synchronize)
+0. Macro-free
+0. Swizzle-free
+0. Simple
 
 This implementation "loads lazily" (which is good). It does not "require explicit initialization" and it does not "lock to allocate".
 
